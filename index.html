@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="card" style="box-shadow: 0 4px 8px 0 rgba(114, 4, 217, 0.2); max-width: 300px; margin: auto; text-align: center; border: 2px solid #ff00ff; padding: 20px; transition: all 0.3s ease-in-out;">
+    <img src="dj.jpeg" alt="John" style="width:100%">
+    <h1>Diya Bhattacharjee</h1>
+    <p class="title" style="color: rgb(39, 12, 247); font-size: 18px;">Dancer & Teacher</p>
+    <p>Burdwan University</p>
+    <a href="https://wa.me/8509255068" style="text-decoration: none; font-size: 22px; color: #ff00ff; margin: 10px; transition: color 0.3s ease;" target="_blank">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+      
+      <a href="mailto:sweetchoco2245@gmail.com" style="text-decoration: none; font-size: 22px; color: #ff00ff; margin: 10px; transition: color 0.3s ease;">
+        <i class="fa fa-envelope"></i>
+      </a>
+      
+      <a href="https://www.instagram.com/" style="text-decoration: none; font-size: 22px; color: #ff00ff; margin: 10px; transition: color 0.3s ease;" target="_blank">
+        <i class="fa fa-instagram"></i>
+      </a>
+      
+      <a href="https://www.youtube.com/channel/@SweetChocoo-ds" style="text-decoration: none; font-size: 22px; color: #ff00ff; margin: 10px; transition: color 0.3s ease;" target="_blank">
+        <i class="fa fa-youtube"></i>
+      </a>
+    <p>
+        <a href="https://wa.me/8509255068?text=Hello, I would like to contact you!" target="_blank">
+          <button style="border: none; outline: 0; display: inline-block; padding: 8px; color: rgb(60, 13, 249); background-color: #ff00ff; text-align: center; cursor: pointer; width: 100%; font-size: 18px;">
+            Contact
+          </button>
+        </a>
+      </p>
+  </div>
+
+  <script>
+    // Add hover effect for card
+    const card = document.querySelector('.card');
+    card.addEventListener('mouseenter', () => {
+      card.style.transform = 'scale(1.05)';
+      card.style.boxShadow = '0 6px 16px rgba(255, 0, 255, 0.5)';
+    });
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'scale(1)';
+      card.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2)';
+    });
+
+    // Add hover effect for links
+    const links = document.querySelectorAll('.card a');
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        link.style.color = '#ff69b4';
+      });
+      link.addEventListener('mouseleave', () => {
+        link.style.color = '#ff00ff';
+      });
+    });
+  </script>
+
+  <style>
+    /* Mobile responsiveness */
+    @media screen and (max-width: 600px) {
+      .card {
+        max-width: 90%;
+        padding: 10px;
+      }
+
+      button {
+        font-size: 16px;
+      }
+
+      a {
+        font-size: 20px;
+      }
+    }
+  </style>
+</body>
+</html>
